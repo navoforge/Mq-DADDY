@@ -194,6 +194,15 @@ h1,h2,h3,p{ margin:0; }
 }
 .header-call:hover{ color: var(--rust-light); }
 
+.whatsapp-icon{
+  display:inline-flex;
+  width:1rem;
+  height:1rem;
+  min-width:1rem;
+  min-height:1rem;
+  margin-inline-start: 8px;
+}
+
 .nav-toggle{
   display:flex;
   flex-direction:column;
