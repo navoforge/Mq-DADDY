@@ -577,8 +577,13 @@ h1,h2,h3,p{ margin:0; }
   .contact-grid{ grid-template-columns: 1fr 1.1fr; align-items:start; }
 }
 
-.call-card{
+.contact-actions{
   margin-top: 30px;
+  display:grid;
+  gap: 18px;
+  max-width: 460px;
+}
+.call-card{
   display:flex;
   align-items:center;
   gap: 16px;
@@ -586,7 +591,7 @@ h1,h2,h3,p{ margin:0; }
   border: 1px solid rgba(201,138,28,.25);
   border-radius: var(--radius-md);
   padding: 18px 22px;
-  max-width: 420px;
+  width: 100%;
   transition: transform .3s var(--ease), border-color .3s var(--ease);
 }
 .call-card:hover{ transform: translateY(-3px); border-color: var(--gold); box-shadow: 0 16px 30px -16px rgba(0,0,0,.45); }
@@ -602,6 +607,36 @@ h1,h2,h3,p{ margin:0; }
 .call-label{ font-size:.82rem; color: var(--cream-dim); }
 .call-number{ font-weight:800; font-size: 1.15rem; color: var(--cream); letter-spacing:.02em; }
 .call-arrow{ margin-inline-start:auto; color: var(--gold); font-size:1.3rem; }
+
+.btn-whatsapp{
+  justify-content:center;
+  padding: 18px 22px;
+  border-radius: var(--radius-md);
+  width: 100%;
+}
+
+.footer-contact-links{
+  display:flex;
+  align-items:center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.footer-whatsapp{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: rgba(201,138,28,.14);
+  color: var(--gold);
+  transition: background .25s var(--ease), transform .25s var(--ease);
+}
+.footer-whatsapp:hover{ background: rgba(201,138,28,.24); transform: translateY(-1px); }
+
+@media (max-width: 640px){
+  .call-card, .btn-whatsapp{ padding: 16px 18px; }
+}
 
 .contact-meta{
   margin-top: 30px;
